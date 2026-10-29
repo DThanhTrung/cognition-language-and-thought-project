@@ -27,13 +27,23 @@
 \usepackage[margin=2.5cm]{geometry}
 \usepackage{setspace}
 \onehalfspacing
-\setlength{\parskip}{6pt}
+% Thụt lề dòng đầu của mỗi đoạn văn.
+% LƯU Ý: khi dùng parindent (thụt lề đầu dòng) nên tắt parskip
+% (khoảng cách giữa các đoạn) để chỉ dùng MỘT trong hai kiểu ngắt đoạn,
+% tránh đoạn trông dư/recks lề.
+\setlength{\parindent}{1.5em}
+\setlength{\parskip}{0pt}
 
 % ---------- Trang trí đề mục ----------
 \usepackage{titlesec}
 \titleformat{\section}{\Large\bfseries}{\thesection.}{0.6em}{}
 \titleformat{\subsection}{\large\bfseries}{\thesubsection.}{0.6em}{}
 \titlespacing*{\section}{0pt}{18pt}{8pt}
+\titlespacing*{\subsection}{0pt}{14pt}{6pt}
+
+% LaTeX MẶC ĐỊNH KHÔNG thụt lề đoạn đầu tiên ngay sau mỗi section/subsection.
+% Gói indentfirst bật thụt lề cho cả đoạn đầu tiên sau mọi đề mục:
+\usepackage{indentfirst}
 
 % ---------- Tiêu đề trang & mục lục ----------
 \usepackage{fancyhdr}
@@ -79,7 +89,7 @@
 % biến các lần bỏ phiếu, (4) kết cục.
 
 \begin{itemize}
-      \item \textbf{Bối cảnh:} Bộ phim xoay quanh phiên toà của 12 bồi thẩm đoàn,
+      \item \textbf{Bối cảnh:} Bộ phim xoay quanh phiên toà của 12 bồi thẩm viên,
             xét xử một cậu thiếu niên bị buộc tội sát hại cha. Nếu bị kết tội,
             cậu thanh niên sẽ bị tử hình trên ghế điện.
       \item \textbf{Tình huống ban đầu:} Trong cuộc bỏ phiếu sơ bộ, có 11 người chọn
@@ -101,11 +111,73 @@
 % Công thức cho mỗi mục: Khái niệm (định nghĩa ngắn, có trích dẫn tài
 % liệu) → Biểu hiện trong phim (chi tiết/kịch bản cụ thể) → Đánh giá
 % (đúng/sai ở mức nào, bài học rút ra).
-Đằng sau những cuộc đối thoại căng thẳng giữa các bồi thẩm đoàn là những vấn đề, những bài học sâu sắc
-về cách con người nhìn nhận và tư duy, đặc biệt là khi mang trong mình thiên kiến. 12 bồi thẩm đoàn
+Đằng sau những cuộc đối thoại căng thẳng giữa các bồi thẩm viên là những vấn đề, những bài học sâu sắc
+về cách con người nhìn nhận và tư duy, đặc biệt là khi mang trong mình thiên kiến. 12 bồi thẩm viên
 trong phim như đang mô phỏng một xã hội thu nhỏ, với con người từ nhiều tầng lớp khác nhau, với đầy đủ
 các loại ý kiến, góc nhìn về một vấn đề, qua đó giúp người xem hiểu rõ hơn về cách xã hội vận hành,
 đánh giá lẫn nhau và tầm quan trọng của chính kiến các nhân trong một thế giới dựa nhiều vào đám đông.
+\subsection{Vấn đề tâm lý đám đông}
+
+Lý thuyết này bắt nguồn từ tác phẩm kinh điển "Tâm lý học đám đông" (La Psychologie des foules, 1895)
+của nhà tâm lý học xã hội người Pháp Gustave Le Bon. Ông chỉ ra rằng chỉ ra rằng khi một người gia nhập đám đông,
+họ trải qua những biến đổi tâm lý đặc trưng như mất đi ý thức cá nhân, bị chi phối bởi một "tâm hồn tập thể "
+và các cảm xúc, ý tưởng, dù tốt hay xấu, đều được lan truyền và nhân lên nhanh chóng.
+
+Trong bộ phim, ta nhận thấy rất rõ hiện tượng này trong lượt bỏ phiếu đầu tiên, khi có 6 bồi thẩm viên
+gần như giơ tay đồng ý kết tội ngay lập tức, sau đó 5 bồi thẩm viên khác cũng ngập ngừng giơ tay theo mặc dù chưa có bằng
+chứng rõ ràng. Chỉ có bồi thẩm viên số 8 không giơ tay, vì ông muốn \textbf{nói chuyện một chút} thay vì kết luận vội vã.
+Tất cả mọi người đều thấy khó hiểu, một số còn chế giễu số 8, cho rằng anh ta đang cố biện hộ cho một vụ viêc
+đã rõ mười mươi.
+
+Điều này đã trở thành bước ngoặt, khiến toàn bộ 11 người còn lại phải ngồi xem xét từng bằng chứng trước khi kết tội.
+Từng chứng cứ, lời khai được lật lại, đặt lên bàn cân, từ đó các lỗ hổng dần hiện ra, và số người chọn ``Có tội'' cũng giảm đi.
+Đến cuối cùng, người đàn ông số 8 cũng thuyết phục được toàn bộ người còn lại, và họ rời phòng họp với 12 phiếu ``Vô tội''.
+
+Tâm lý học xã hội có khái niệm ``vòng xoáy im lặng'' (Elisabeth Noelle-Neumann): khi ta cảm thấy quan điểm của mình là thiểu số, ta có xu hướng im lặng vì sợ bị cô lập
+khi bày tỏ quan điểm. Sự im lặng khiến thiểu số ngày càng yếu thế hơn, từ đó hình thành vòng xoáy, giúp đa số tiếp tục thắng thế.
+Ở đây, không ít bồi thẩm viên bỏ phiếu ``Có tội'' không phải vì họ tin là vậy, cũng không phải vì họ không có quan điểm, mà vì họ sợ bị đám đông đánh giá, và không tin rằng bản thân
+có thể lật ngược tình thế. Bằng chứng là những người đàn ông ngập ngừng nhất trong lượt giơ tay này cũng chính là những người đầu tiên thay đổi quan điểm về sau.
+
+
+\subsection{Ảnh hưởng của định kiến cá nhân và lối mòn tư duy}
+Trong bộ phim, có 2 nhân vật không nhận được nhiều thiện cảm của người xem, hay có thể coi là các ``phản diện'' của bộ phim, đó là
+người đàn ông số 3 và số 10. Đầu tiên, người đàn ông số 10 có một sự thù ghét to lớn dành cho cậu bé đang bị xét xử, chỉ vì ông
+ta biết rằng cậu bé xuất thân từ khu ổ chuột. Trong suốt cuộc tranh luận, ông ta không đưa ra được bất kì lập luận thuyết phục nào,
+mà chỉ dựa vào các định kiến của mình để kết tội cậu bé.
+
+Bên cạnh số 10, người đàn ông số 3 cũng là người mang nhiều thiên kiến không kém.
+Ngay từ khi mới vào phòng họp, ông ta đã chắc nịch rằng đứa bé đứng sau vành móng ngựa là hung thủ.
+Số 3 có một cậu con trai mà ông cho là ngỗ ngược, vậy nên ông ta có một cái nhìn cực đoan về giới trẻ.
+Ông ta cho rằng bây giờ, đám trẻ con quá tự do, láo toét, nên việc giết người cũng là chuyện có thể.
+
+Trong lý thuyết tâm lý học nhận thức, lối mòn tư duy là hiện tượng xảy ra khi con người cố gắng dùng các lối suy nghĩ đã biết để áp dụng lên
+các vấn đề mới. Nó cho phép ta đưa ra quyết định nhanh chóng, nhưng cũng dễ dẫn đến sai lầm. Ở đây, người đàn ông số 3 và số 10 đã sử dụng
+những lối tư duy này để kết tội cậu bé. Hai người này đại diện cho sự bảo thủ và thiên kiến, họ muốn đẩy cậu bé lên ghế điện
+phần nhiều đến từ sự hằn học cá nhân hơn là bằng chứng rõ ràng. Và như ta đã thấy, quyết định này đã có thể tước đoạt một mạng người
+vô tội chỉ trong 5 phút, nếu không có người đàn ông số 8.
+
+
+\subsection{Tâm lý học về người ``phá băng''}
+Người đàn ông số 8
+từ đầu đến cuối đều đưa ra được các lập luận gãy gọn, dựa trên bằng chứng rõ ràng. Ông không dựa trên thù hằn hay cảm xúc, mà suy luận hoàn toàn bằng logic.
+Từ việc âm thanh đoàn tàu đi ngang qua có thể khiến người phụ nữ nhà bên nhìn nhầm, sự vô lý trong lời khai của ông lão tầng dưới, cho đến việc cậu bé có thể do quá sợ hãi
+mà quên những gì mình đã làm trong khoảng thời gian xảy ra vụ án.
+
+Lý thuyết về ảnh hưởng thiểu số (Minority Influence) của nhà tâm lý học xã hội Serge Moscovici cho rằng ý kiến thiểu số có thể
+tác động đến đa số nếu họ duy trì sự kiên định và nhất quán. Moscovici tin rằng, hành vi kiên định của thiểu số sẽ tạo ra xung đột nhận thức ở đa số.
+Để giải quyết sự xung đột này, đa số không còn chỉ dựa vào số đông để phán đoán, mà bắt đầu tiến hành quá trình xác nhận đối với quan điểm của thiểu số.
+Ở đây, người đàn ông số 8 giữ vững lập trường qua nhiều vòng bỏ phiếu, không dao động dù bị cô lập. Chính sự kiên định này đã ảnh hưởng đến những người còn lại,
+đề rồi dần dần số 9, số 5 và số 11 đã thoát khỏi ảnh hưởng của đám đông, dẫn đến sự lan truyền ảnh hưởng của thiểu số.
+
+
+\section{Cảm nhận cá nhân}
+Mặc dù cuộc tranh luận để phân định kẻ sát nhân mới là nội dung chính, song dễ thấy, việc đặt 12 người đàn ông đến từ nhiều
+tầng lớp khác nhau như đang mô phỏng một xã hội thu nhỏ với nhiều kiểu tư duy và thiên kiến, và điều đặc biệt là ta vẫn có thể dễ dàng bắt gặp
+các tính cách này ngoài cuộc sống hiện đại.
+
+Trong bộ phim, có một chi tiết thú vị đó là người đàn ông số 8 chưa từng khẳng định rằng cậu bé vô tội. Ông nhiều lần nhấn mạnh ``I don't know'' (Tôi không biết),
+và thừa nhận rằng mình cũng không hoàn toàn tin tưởng cậu bé. Tuy vậy, ông ta tin chắc rằng, cho dù vậy, vẫn cần có một cuộc họp với các bằng chứng
+rõ ràng trước khi đưa ra bất kì kết luận nào. Những bồi thẩm viên còn lại cũng đều dành sự tôn trọng lớn cho số 8.
 
 %=====================================================================
 \section{Liên hệ bản thân}
