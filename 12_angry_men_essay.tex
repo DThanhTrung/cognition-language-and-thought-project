@@ -1,0 +1,151 @@
+%=====================================================================
+%  BÀI LUẬN GIỮA KÌ — PHÂN TÍCH PHIM "12 NGƯỜI ĐÀN ÔNG GIẬN DỮ"
+%  Dưới góc nhìn Khoa học Nhận thức
+%  Môn: Cognition, Language and Thought — IAI, VNU-UET
+%
+%  HƯỚNG DẪN SỬ DỤNG KHUNG NÀY:
+%  • Các dòng bắt đầu bằng % là ghi chú hướng dẫn, không xuất hiện trong PDF.
+%  • Các bullet (itemize) là khung ý để viết thành đoạn văn; sau khi viết
+%    xong có thể xoá để bài luận thành văn xuôi thuần tuý.
+%  • Biên dịch bằng pdflatex (không cần BibTeX):
+%        pdflatex 12_angry_men_essay.tex   (2 lần để cập nhật mục lục)
+%=====================================================================
+
+\documentclass[12pt,a4paper]{article}
+
+% ---------- Ngôn ngữ & phông chữ (hỗ trợ tiếng Việt, pdflatex) ----------
+% Gói vietnam tự cài đặt bảng mã T5 cho tiếng Việt; KHÔNG dùng thêm
+% \usepackage[T1]{fontenc} vì T1 không có các ký tự ô/ơ/ư/ă/â.
+\usepackage[utf8]{vietnam}
+
+% ---------- Toán & tiêu đề, danh sách ----------
+\usepackage{amsmath, amssymb}
+\usepackage{enumitem}
+\setlist{itemsep=2pt, topsep=4pt}
+
+% ---------- Trang giấy & dãn dòng ----------
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+\setlength{\parskip}{6pt}
+
+% ---------- Trang trí đề mục ----------
+\usepackage{titlesec}
+\titleformat{\section}{\Large\bfseries}{\thesection.}{0.6em}{}
+\titleformat{\subsection}{\large\bfseries}{\thesubsection.}{0.6em}{}
+\titlespacing*{\section}{0pt}{18pt}{8pt}
+
+% ---------- Tiêu đề trang & mục lục ----------
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small 12 Người Đàn Ông Giận Dữ}
+\fancyhead[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\usepackage[hidelinks]{hyperref}
+
+% ---------- Thông tin bài luận (sửa các chỗ trống bên dưới) ----------
+\newcommand{\studentname}{Đỗ Thành Trung}
+\newcommand{\studentid}{24022472}
+\newcommand{\class}{K69A - AI3}
+\newcommand{\course}{Nhận thức, ngôn ngữ và tư duy}
+\newcommand{\univ}{IAI, UET - VNU}
+
+\title{\textbf{Phân tích phim \\ \emph{12 Người Đàn Ông Giận Dữ}\\[3pt]}}
+\author{%
+  \begin{tabular}{@{}l@{ $:$\ }l@{}}
+    Họ và tên    & \studentname\\
+    Mã sinh viên & \studentid\\
+    Lớp khóa học & \class\\
+    Tên môn học  & \course\\
+    Khoa/Viện    & \univ
+  \end{tabular}}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+\newpage
+% \tableofcontents
+\newpage
+
+%=====================================================================
+\section{Tóm tắt nội dung phim}
+% Viết khoảng 300–400 từ, mô tả TÓM TẮT KHÁCH QUAN — chưa phân tích,
+% chưa đưa khái niệm khoa học nhận thức vào phần này.
+% Gợi ý cấu trúc đoạn: (1) bối cảnh, (2) tình huống ban đầu, (3) diễn
+% biến các lần bỏ phiếu, (4) kết cục.
+
+\begin{itemize}
+      \item \textbf{Bối cảnh:} Bộ phim xoay quanh phiên toà của 12 bồi thẩm đoàn,
+            xét xử một cậu thiếu niên bị buộc tội sát hại cha. Nếu bị kết tội,
+            cậu thanh niên sẽ bị tử hình trên ghế điện.
+      \item \textbf{Tình huống ban đầu:} Trong cuộc bỏ phiếu sơ bộ, có 11 người chọn
+            ``Có tội'', chỉ một mình Bồi thẩm viên số 8 bỏ phiếu ``Vô tội'' —
+            không phải vì chắc chắn bị cáo vô tội, mà vì ông muốn xem lại
+            vụ án kĩ hơn thay vì vội vã đưa ra quyết định.
+      \item \textbf{Diễn biến:} Từng bằng chứng được xem xét lại, bao gồm con dao gây án,
+            lời khai của người đàn ông già dưới nhà, lời khai của người phụ nữ đối diện,
+            dấu vết trên cơ thể nạn nhân, chuyến tàu trên cao. Mỗi lần
+            nghi vấn là một lần bỏ phiếu lại, và số phiếu ``Vô tội'' tăng dần.
+      \item \textbf{Kết cục:} Toàn bộ 12 người cuối cùng nhất trí ``Vô tội'', và bị cáo
+            được tha tội.
+\end{itemize}
+
+%=====================================================================
+\section{Phân tích phim và đánh giá}
+% Phần TRỌNG TÂM của bài luận (chiếm ~60–70% dung lượng). Mỗi mục con
+% nên gắn 1 khái niệm nhận thức với CẢNH CỤ THỂ trong phim, rồi đánh giá.
+% Công thức cho mỗi mục: Khái niệm (định nghĩa ngắn, có trích dẫn tài
+% liệu) → Biểu hiện trong phim (chi tiết/kịch bản cụ thể) → Đánh giá
+% (đúng/sai ở mức nào, bài học rút ra).
+Đằng sau những cuộc đối thoại căng thẳng giữa các bồi thẩm đoàn là những vấn đề, những bài học sâu sắc
+về cách con người nhìn nhận và tư duy, đặc biệt là khi mang trong mình thiên kiến. 12 bồi thẩm đoàn
+trong phim như đang mô phỏng một xã hội thu nhỏ, với con người từ nhiều tầng lớp khác nhau, với đầy đủ
+các loại ý kiến, góc nhìn về một vấn đề, qua đó giúp người xem hiểu rõ hơn về cách xã hội vận hành,
+đánh giá lẫn nhau và tầm quan trọng của chính kiến các nhân trong một thế giới dựa nhiều vào đám đông.
+
+%=====================================================================
+\section{Liên hệ bản thân}
+% Viết 400–500 từ ở ngôi thứ nhất, kết nối bài học từ phim với kinh nghiệm
+% cá nhân. Không cần phải "ấn tượng" theo hướng phim ảnh; càng chân thật
+% và chi tiết càng tốt.
+
+\begin{itemize}
+      \item Kể một tình huống thực tế em từng tham gia quyết định nhóm (học
+            tập, câu lạc bộ, gia đình) mà kết luận ban đầu bị chi phối bởi thiên
+            kiến xác nhận hoặc áp lực đám đông; phân tích theo khái niệm ở Mục 2.
+      \item Tự quan sát hai hệ thống tư duy của bản thân: khi nào mình phản
+            xạ theo System 1 (thi, trả lời nhanh, ấn tượng đầu tiên về người khác),
+            khi nào cần ép mình vào System 2.
+      \item Nhận xét về cách đọc nguồn tin/thông tin trên mạng xã hội: nhận
+            diện xu hướng chỉ đọc nguồn ủng hộ quan điểm của mình (echo chamber,
+            filter bubble).% Có thể liên hệ luật "nghi ngờ hợp lý" như phương pháp
+            % đọc phản biện: tìm bằng chứng bác bỏ trước khi kết luận.
+      \item Rút ra 1--2 thói quen cụ thể sẽ thay đổi sau bài học này (ví dụ:
+            đặt câu hỏi ngược, hoãn phán xét, yêu cầu trình bày hai phía tranh
+            luận).
+\end{itemize}
+
+%=====================================================================
+\section{Kết luận}
+% Viết 300–400 từ, KHÔNG đưa ý mới; chỉ tổng kết và mở rộng.
+
+\begin{itemize}
+      \item Tóm lại luận điểm chính: bộ phim là minh hoạ xuất sắc cho các cơ
+            chế nhận thức — tư duy nhanh/chậm, thiên kiến xác nhận, lối tắt nhận
+            thức, tư duy nhóm, bất hòa nhận thức, trí nhớ dễ sai lệch, vai trò của
+            ngôn ngữ — trong một quyết định mang tính sinh tử.
+      \item Giá trị của mô hình ``nghi ngờ hợp lý'' như một công cụ nhận thức
+            phản biện: chậm lại, xét bằng chứng bác bỏ, chịu trách nhiệm với quyết
+            định.
+      \item Mở rộng: bài học áp dụng ngoài phòng xử án — trong học thuật,
+            nơi làm việc, và bối cảnh thông tin sai lệch hiện nay.
+\end{itemize}
+
+%=====================================================================
+\section*{Tài liệu tham khảo}
+
+\end{document}
