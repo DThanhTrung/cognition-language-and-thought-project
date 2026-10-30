@@ -20,6 +20,8 @@
 
 % ---------- Toán & tiêu đề, danh sách ----------
 \usepackage{amsmath, amssymb}
+\usepackage{graphicx}   % chèn ảnh
+\usepackage{float}      % cho [H] - đặt ảnh đúng vị trí, không trôi
 \usepackage{enumitem}
 \setlist{itemsep=2pt, topsep=4pt}
 
@@ -112,7 +114,7 @@
 % liệu) → Biểu hiện trong phim (chi tiết/kịch bản cụ thể) → Đánh giá
 % (đúng/sai ở mức nào, bài học rút ra).
 Đằng sau những cuộc đối thoại căng thẳng giữa các bồi thẩm viên là những vấn đề, những bài học sâu sắc
-về cách con người nhìn nhận và tư duy, đặc biệt là khi mang trong mình thiên kiến. 12 bồi thẩm viên
+về cách con người nhìn nhận và tư duy, đặc biệt là khi mang trong mình định kiến. 12 bồi thẩm viên
 trong phim như đang mô phỏng một xã hội thu nhỏ, với con người từ nhiều tầng lớp khác nhau, với đầy đủ
 các loại ý kiến, góc nhìn về một vấn đề, qua đó giúp người xem hiểu rõ hơn về cách xã hội vận hành,
 đánh giá lẫn nhau và tầm quan trọng của chính kiến các nhân trong một thế giới dựa nhiều vào đám đông.
@@ -122,6 +124,13 @@ Lý thuyết này bắt nguồn từ tác phẩm kinh điển "Tâm lý học đ
 của nhà tâm lý học xã hội người Pháp Gustave Le Bon. Ông chỉ ra rằng chỉ ra rằng khi một người gia nhập đám đông,
 họ trải qua những biến đổi tâm lý đặc trưng như mất đi ý thức cá nhân, bị chi phối bởi một "tâm hồn tập thể "
 và các cảm xúc, ý tưởng, dù tốt hay xấu, đều được lan truyền và nhân lên nhanh chóng.
+
+\begin{figure}[H]
+      \centering
+      \includegraphics[width=\linewidth]{images/mob_psychology.png}
+      % \caption{11 người đàn ông cho rằng cậu bé có tội trong lần bỏ phiếu đầu tiên}
+      \label{fig:mob}
+\end{figure}
 
 Trong bộ phim, ta nhận thấy rất rõ hiện tượng này trong lượt bỏ phiếu đầu tiên, khi có 6 bồi thẩm viên
 gần như giơ tay đồng ý kết tội ngay lập tức, sau đó 5 bồi thẩm viên khác cũng ngập ngừng giơ tay theo mặc dù chưa có bằng
@@ -145,7 +154,7 @@ người đàn ông số 3 và số 10. Đầu tiên, người đàn ông số 1
 ta biết rằng cậu bé xuất thân từ khu ổ chuột. Trong suốt cuộc tranh luận, ông ta không đưa ra được bất kì lập luận thuyết phục nào,
 mà chỉ dựa vào các định kiến của mình để kết tội cậu bé.
 
-Bên cạnh số 10, người đàn ông số 3 cũng là người mang nhiều thiên kiến không kém.
+Bên cạnh số 10, người đàn ông số 3 cũng là người mang nhiều định kiến không kém.
 Ngay từ khi mới vào phòng họp, ông ta đã chắc nịch rằng đứa bé đứng sau vành móng ngựa là hung thủ.
 Số 3 có một cậu con trai mà ông cho là ngỗ ngược, vậy nên ông ta có một cái nhìn cực đoan về giới trẻ.
 Ông ta cho rằng bây giờ, đám trẻ con quá tự do, láo toét, nên việc giết người cũng là chuyện có thể.
@@ -157,8 +166,22 @@ Và nếu thiên kiến xác nhận đủ mạnh, chủ thể vẫn có xác su�
 
 Ở đây, người đàn ông số 3 và số 10 đã sử dụng những lối mòn tư duy và thiên kiến xác nhận để kết tội cậu bé. Trong cả cuộc họp, hai người gần như không thay đổi ý kiến của họ về cậu bé, ngay cả khi đã
 có bằng chứng phủ nhận cáo buộc rõ ràng, tuy nhiên lại không đưa ra lý do rõ ràng cho việc đó.
-Họ đại diện cho sự bảo thủ và thiên kiến, họ muốn đẩy cậu bé lên ghế điện phần nhiều đến từ sự hằn học cá nhân hơn là bằng chứng rõ ràng. Và như ta đã thấy,
+Họ đại diện cho sự bảo thủ và định kiến, họ muốn đẩy cậu bé lên ghế điện phần nhiều đến từ sự hằn học cá nhân hơn là bằng chứng rõ ràng. Và như ta đã thấy,
 quyết định này đã có thể tước đoạt một mạng người vô tội chỉ trong 5 phút, nếu không có người đàn ông số 8.
+
+\begin{figure}[H]
+      \centering
+      \includegraphics[width=\linewidth]{images/self_biases_1.png}
+      % \caption{}
+      \label{fig:bias1}
+\end{figure}
+
+\begin{figure}[H]
+      \centering
+      \includegraphics[width=\linewidth]{images/self_biases_2.png}
+      % \caption{}
+      \label{fig:bias2}
+\end{figure}
 
 
 \subsection{Tâm lý học về người ``phá băng''}
@@ -173,15 +196,48 @@ tác động đến đa số nếu họ duy trì sự kiên định và nhất q
 Ở đây, người đàn ông số 8 giữ vững lập trường qua nhiều vòng bỏ phiếu, không dao động dù bị cô lập. Chính sự kiên định này đã ảnh hưởng đến những người còn lại,
 đề rồi dần dần số 9, số 5 và số 11 đã thoát khỏi ảnh hưởng của đám đông, dẫn đến sự lan truyền ảnh hưởng của thiểu số.
 
+\begin{figure}[H]
+      \centering
+      \includegraphics[width=\linewidth]{images/ice_breaker.png}
+      % \caption{}
+      \label{fig:ice}
+\end{figure}
+
 
 \section{Cảm nhận cá nhân}
-Mặc dù cuộc tranh luận để phân định kẻ sát nhân mới là nội dung chính, song dễ thấy, việc đặt 12 người đàn ông đến từ nhiều
-tầng lớp khác nhau như đang mô phỏng một xã hội thu nhỏ với nhiều kiểu tư duy và thiên kiến, và điều đặc biệt là ta vẫn có thể dễ dàng bắt gặp
-các tính cách này ngoài cuộc sống hiện đại.
-
-Trong bộ phim, có một chi tiết thú vị đó là người đàn ông số 8 chưa từng khẳng định rằng cậu bé vô tội. Ông nhiều lần nhấn mạnh ``I don't know'' (Tôi không biết),
+Trong bộ phim, người đàn ông số 8 hiện lên như một tiếng nói phá tan sự đơn điệu của đám đông chưa dám nêu chính kiến.
+Có một câu nói của ông mà mình rất ấn tương, đó là ``Chúng ta không thể quyết định một mạng người chỉ trong 5 phút''.
+Câu nói đó không xuất phát từ lòng thương hại cho cậu thiếu niên, mà từ lương tâm của một thẩm phán khi đứng trước quyết định chuẩn bị kết liễu một mạng người.
+Có một chi tiết thú vị đó là ông chưa từng khẳng định rằng cậu bé vô tội. Ông nhiều lần nhấn mạnh ``I don't know'' (Tôi không biết),
 và thừa nhận rằng mình cũng không hoàn toàn tin tưởng cậu bé. Tuy vậy, ông ta tin chắc rằng, cho dù vậy, vẫn cần có một cuộc họp với các bằng chứng
-rõ ràng trước khi đưa ra bất kì kết luận nào. Những bồi thẩm viên còn lại cũng đều dành sự tôn trọng lớn cho số 8.
+rõ ràng trước khi đưa ra bất kì kết luận nào, và rằng các cáo buộc chống lại cậu bé mà có lỗ hổng, cho dù nhỏ đến đâu, cũng cần được xem xét kĩ.
+
+
+Mặc dù cuộc tranh luận để phân định kẻ sát nhân mới là nội dung chính, song dễ thấy, việc đặt 12 người đàn ông đến từ nhiều
+tầng lớp khác nhau như đang mô phỏng một xã hội thu nhỏ với nhiều kiểu tư duy và thiên kiến.
+Chúng ta có thể dễ dàng bắt gặp các chủ tiệm sửa xe, thợ sửa đồng hồ, tay môi giới hay kĩ sư này ngoài cuộc sống hiện đại.
+Chi tiết này đã tạo ra sự đồng cảm lớn ở người xem, và ta luôn có thể thấy bản thân ở một hoặc hai người đàn ông
+trong phòng xử án.
+
+
+Chúng ta có người đàn ông số 3, số 10 có thái độ thù hằn mạnh mẽ, luôn nóng nảy, bộc trực. Ta có người đàn ông số 7, một tay buôn, vốn không quan tâm đến tính mạng
+cậu bé ngay từ đầu, mà chỉ quyết định nhanh chóng theo đa số vì tấm vé xem trận bóng chày đang chờ trong túi. Ta cũng có người đàn ông số 4 và số 9 luôn giữ thái độ, bình tĩnh,
+lý trí, suy xét tình huống dựa trên logic rõ ràng, đưa ra các lý lẽ thuyết phục. 12 người đàn ông như 12 nhân cách trong xã hội như muốn nhắc nhở người xem về chính bản thân mình,
+khiến ta tự hỏi mình đang giống ai trong số những người này, từ đó soi chiếu lại bản thân rằng mình có đang đưa ra các quyết định trong cuộc sống dựa trên lý trí, hay chỉ dựa
+vào cảm nhận, thiên kiến có sẵn, và rằng một quyết định nóng vội theo đám đông, không có lập trường rõ ràng có thể gây ra hậu quả lớn đến mức nào.
+
+
+Suy cho cùng, bộ phim vẫn không đưa ra kết luận rằng cậu bé có phạm tội giết cha mình hay không. Ta vẫn không thể biết được rằng lời khai của các nhân chứng có chính xác không,
+hay chuyện gì đã thật sự xảy ra vào đêm hôm đó. Trên thực tế, thông điệp lớn nhất của bộ phim nằm ở sự công bằng và ý nghĩa của việc có quan điểm cá nhân, và nhấn mạnh
+tầm quan trọng của việc dũng cảm dám đi ngược lại đám đông để phát biểu mà không sợ bị chê cười.
+
+
+\begin{figure}[H]
+      \centering
+      \includegraphics[width=\linewidth]{images/self_thought.png}
+      % \caption{}
+      \label{fig:thought}
+\end{figure}
 
 %=====================================================================
 \section{Liên hệ bản thân}
